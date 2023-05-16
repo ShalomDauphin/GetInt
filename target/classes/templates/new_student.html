@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Student Internship</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <h1>Student Internship</h1>
+    <hr>
+    <h2>save Student</h2>
+
+    <form action="#" th:action="@{/saveStudent}" th:object="${student}" method="POST">
+        <input type="text" th:field="*{names}" placeholder="Names" class="form-control mb-4 col-4" required>
+
+        <input type="text" th:field="*{yearOfBirth}" placeholder="Year of Birth" class="form-control mb-4 col-4" required>
+
+        <input type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{mobileNumber}" placeholder="mobileNumber" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{gender}" placeholder="gender" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{occupation}" placeholder="occupation" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{nationality}" placeholder="nationality" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{fieldOfStudy}" placeholder="fieldOfStudy" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{schoolName}" placeholder="schoolName" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{yearOfGrad}" placeholder="yearOfGrad" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{gpa}" placeholder="gpa" class="form-control mb-4 col-4" required>
+        <input type="text" th:field="*{numberOfSemester}" placeholder="numberOfSemester" class="form-control mb-4 col-4" required>
+
+        <button type="submit" class="btn btn-info col-2"> Save Student</button>
+    </form>
+
+    <hr>
+
+    <a th:href="@{/list}"> Back to Student List</a>
+</div>
+</body>
+
+</html>
